@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>BluetoothManager| Documentation</title>
+    
+    <link rel="icon"       href="../../../favicon.ico" />
+    <link rel="mask-icon"  href="../../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                
+                  <a href="../index.html" class="item">Puget Buoy Beta</a>
+                
+              </li>
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">BluetoothManager</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Class</span>
+  <h1 class="title">BluetoothManager</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      The bluetooth manager manages bluetooth connections to various devies including buoys and spoolers
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <section id='declaration' class='declaration'>
+  <h2>Declaration</h2>
+  <div class='declaration-group'>
+    <pre class='source indented'><code><span class='token-keyword'>class</span> <span class='token-identifier'>BluetoothManager</span></code></pre>
+  </div>
+</section>
+<section id="parameters" class="parameters">
+  <h2>Parameters</h2>
+  <dl>
+    
+      <dt class="param-name"><code>bluetoothStateDidChangeNotification</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>An NS notification representing if the bluetooth state changed</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>bluetoothDidConnectPeripheralNotification</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>An NS notification for if a peripheral is conntected</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>unknownPeripheralNamePlaceholder</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A placerholder name for unknown periphipherals</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>allowedBluetoothAccessoryPrefix</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Bluetooth devices are filtered based on the specified prefix</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>secondaryAllowedBluetoothPrefix</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A secondary prefix bluetooth devices can be filtered by</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>centralManager</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A reference to the <code>CBCentralManager</code></p></div>
+      </dd>
+    
+      <dt class="param-name"><code>buttonCharacteristic</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The button characteristic of the spooler</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>managerType</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Defines what type of manager the bluetooth manager is (spooler or buoy)</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>autoqueClicked</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A  <code>Bool</code> Value that is set if the user is deploying via autoque</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>autoqueString</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The string that will be deployed to via autoque</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>pugetBuoyCharacteristic</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The puget buoy characteristic where all data is written to buoys</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>isBluetoothAvailable</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>Bool</code> value representing whether or not bluetooth is available to the app</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>detectedNewPeripheral</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A list of peripherals that have been detected that the user has not connected to before</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>detectedKnownPeripheral</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A list of peripherals that have been detected that the user has connected to before</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>allDetectedPeripheral</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A list of peripherals from both <code>detectedNewPeripherals</code> and <code>detectedKnownPeripherals</code></p></div>
+      </dd>
+    
+      <dt class="param-name"><code>connectedPeripheral</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Ther peripheral that is currentluy connected</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>isScanningForDevices</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>Bool</code> value if the user is currenly scanning for devices</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>connectionState</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The current connection state of the bluetooth manager</p></div>
+      </dd>
+    
+  </dl>
+</section>
+
+  </div>
+</div>
+
+  
+  <section id='topics' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>Topics</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Initializers</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/init(type:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='identifier'>init</span><span class='decorator'>(</span><span class='decorator'>type</span><span class='decorator'>: </span><span class='decorator'>BLEManagers</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">An initializer for the bluetooth manager</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/alldetectedperipheral.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>allDetectedPeripheral</span><span class='decorator'>: [</span><span class='decorator'>CBPeripheral</span><span class='decorator'>]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/connectedperipheral.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>connectedPeripheral</span><span class='decorator'>: </span><span class='decorator'>CBPeripheral</span><span class='decorator'>?</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/connectionstate.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>connectionState</span><span class='decorator'>: </span><span class='decorator'>CBPeripheralState</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/detectedknownperipheral.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>detectedKnownPeripheral</span><span class='decorator'>: [</span><span class='decorator'>CBPeripheral</span><span class='decorator'>]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/detectednewperipheral.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>detectedNewPeripheral</span><span class='decorator'>: [</span><span class='decorator'>CBPeripheral</span><span class='decorator'>]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/isbluetoothavailable.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>isBluetoothAvailable</span><span class='decorator'>: </span><span class='decorator'>Bool</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/isscanningfordevices.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>isScanningForDevices</span><span class='decorator'>: </span><span class='decorator'>Bool</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Methods</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/attemptconnectionto(_:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>attemptConnectionTo</span><span class='decorator'>(</span><span class='decorator'>CBPeripheral</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Start a connection attempt to a peripheral.</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/deployfirstbuoytostring(buoystring:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>deployFirstBuoyToString</span><span class='decorator'>(</span><span class='decorator'>buoyString</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function used in the autoque process that deploys the first buoy found to the specified string</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/disconnect(peripheral:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>disconnect</span><span class='decorator'>(</span><span class='decorator'>peripheral</span><span class='decorator'>: </span><span class='decorator'>CBPeripheral</span><span class='decorator'>?)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to disconnect or cancel a peripheral’s connection.</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/initbluetooth().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>initBluetooth</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Ensure bluetooth is ready to use in the app</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/lockbuoy(buoy:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>lockBuoy</span><span class='decorator'>(</span><span class='decorator'>buoy</span><span class='decorator'>: </span><span class='decorator'>Buoy</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Lock the buoy when a User pressed the manual lock button</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/setvaluenotifications(enabled:for:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>setValueNotifications</span><span class='decorator'>(</span><span class='decorator'>enabled</span><span class='decorator'>: </span><span class='decorator'>Bool</span><span class='decorator'>, </span><span class='decorator'>for</span><span class='decorator'>: </span><span class='decorator'>NotifyingSensors</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to set the notification value for a specific bluetooth characteristic</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/startscanning().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>startScanning</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to begin scanning over bluetooth</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/stopscanning().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>stopScanning</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function  to stop the bluetooth scanning</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/unlockbuoy(buoy:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>unlockBuoy</span><span class='decorator'>(</span><span class='decorator'>buoy</span><span class='decorator'>: </span><span class='decorator'>Buoy</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Unlock the buoy when a User pressed the manual unlock button</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/writeretrievaltime(value:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>writeRetrievalTime</span><span class='decorator'>(</span><span class='decorator'>value</span><span class='decorator'>: </span><span class='decorator'>Date</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function used when a buoy is being deployed to write the retrieval time given by user input to the buoy.</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Type Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/bluetoothdidconnectperipheralnotification.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>static</span><span class='decorator empty-token'> </span><span class='decorator'>let</span><span class='decorator empty-token'> </span><span class='identifier'>bluetoothDidConnectPeripheralNotification</span><span class='decorator'>: </span><span class='decorator'>NSNotification</span><span class='decorator'>.</span><span class='decorator'>Name</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/bluetoothstatedidchangenotification.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>static</span><span class='decorator empty-token'> </span><span class='decorator'>let</span><span class='decorator empty-token'> </span><span class='identifier'>bluetoothStateDidChangeNotification</span><span class='decorator'>: </span><span class='decorator'>NSNotification</span><span class='decorator'>.</span><span class='decorator'>Name</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Enumerations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/notifyingsensors/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>enum</span><span class='decorator empty-token'> </span><span class='identifier'>NotifyingSensors</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">An enum of DevEdge board sensors that support notifying the connected app over Bluetooth when their values change.</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Default Implementations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/cbcentralmanagerdelegate-implementations.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  CBCentralManagerDelegate Implementations
+                </a>
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/cbperipheraldelegate-implementations.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  CBPeripheralDelegate Implementations
+                </a>
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/puget_buoy_beta/bluetoothmanager/observableobject-implementations.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  ObservableObject Implementations
+                </a>
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+  
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

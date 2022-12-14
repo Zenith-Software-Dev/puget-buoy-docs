@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>User| Documentation</title>
+    
+    <link rel="icon"       href="../../../favicon.ico" />
+    <link rel="mask-icon"  href="../../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                
+                  <a href="../index.html" class="item">Puget Buoy Beta</a>
+                
+              </li>
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">User</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Class</span>
+  <h1 class="title">User</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      Creates the User class that handles all functionality for an app user across all screens and launch instances of the app.
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <section id='declaration' class='declaration'>
+  <h2>Declaration</h2>
+  <div class='declaration-group'>
+    <pre class='source indented'><code><span class='token-keyword'>class</span> <span class='token-identifier'>User</span></code></pre>
+  </div>
+</section>
+<section id="parameters" class="parameters">
+  <h2>Parameters</h2>
+  <dl>
+    
+      <dt class="param-name"><code>locationManager</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Handles tracking the location of a user’s device and retrieve their current location.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>shared</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Instance of the User object for app to access data within the class.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>buoyBluetoothManager</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Manages all Bluetooth functionality for a Buoy.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>spoolerBluetoothManager</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Mannages all Bluetooth functionality for a Spooler.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>alertText</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Text to be shown on an alert if the user does an undoable action or there is an issue with a feature at the time of action</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>shouldShowAlert</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Boolean variable to let the app knowif it should show the alert. If true, app displays the alert.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>location</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Current location of the user.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>connectedBuoys</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Array of Buoys that the user is currently connected to.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>disconnectedBuoys</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Array of Buoys that the user is currently disconnected from but have connected to previously.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>selectedBuoy</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Stores which Buoy the user currently has selected.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>selectedString</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Stores which String the user currently has selected.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>buoyStrings</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Array of all of a user’s Buoy Strings.</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>prevConnectedBuoys</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Dictionary of all Buoys that a user has previously connected to. It stores the original name that is given by Bluetooth as the key and value dy default. When a user changes the name of the Buoy within the app, it changes the value for that Buoy to store the friendly name of the Buoy.</p></div>
+      </dd>
+    
+  </dl>
+</section>
+
+  </div>
+</div>
+
+  
+  <section id='topics' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>Topics</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Initializers</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/init().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='identifier'>init</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/init(from:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='identifier'>init</span><span class='decorator'>(</span><span class='decorator'>from</span><span class='decorator'>: </span><span class='decorator'>Decoder</span><span class='decorator'>) </span><span class='decorator'>throws</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/alerttext.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>alertText</span><span class='decorator'>: </span><span class='decorator'>String</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/buoybluetoothmanager.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>let</span><span class='decorator empty-token'> </span><span class='identifier'>buoyBluetoothManager</span><span class='decorator'>: </span><span class='decorator'>BluetoothManager</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/buoystrings.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>buoyStrings</span><span class='decorator'>: [</span><span class='decorator'>BuoyString</span><span class='decorator'>]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/connectedbuoys.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>connectedBuoys</span><span class='decorator'>: [</span><span class='decorator'>Buoy</span><span class='decorator'>]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/disconnectedbuoys.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>disconnectedBuoys</span><span class='decorator'>: [</span><span class='decorator'>Buoy</span><span class='decorator'>]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/location.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>location</span><span class='decorator'>: </span><span class='decorator'>CLLocationCoordinate2D</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/locationmanager.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>locationManager</span><span class='decorator'>: </span><span class='decorator'>LocationManager</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/prevconnectedbuoys.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>prevConnectedBuoys</span><span class='decorator'>: [</span><span class='decorator'>String</span><span class='decorator'> : </span><span class='decorator'>String</span><span class='decorator'>]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/selectedbuoy.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>selectedBuoy</span><span class='decorator'>: </span><span class='decorator'>Buoy</span><span class='decorator'>?</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/selectedstring.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>selectedString</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span><span class='decorator'>?</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/shouldshowalert.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>shouldShowAlert</span><span class='decorator'>: </span><span class='decorator'>Bool</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/spoolerbluetoothmanager.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>let</span><span class='decorator empty-token'> </span><span class='identifier'>spoolerBluetoothManager</span><span class='decorator'>: </span><span class='decorator'>BluetoothManager</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Methods</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/deploybuoy(buoy:retrievaltime:buoystring:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>deployBuoy</span><span class='decorator'>(</span><span class='decorator'>buoy</span><span class='decorator'>: </span><span class='decorator'>Buoy</span><span class='decorator'>, </span><span class='decorator'>retrievalTime</span><span class='decorator'>: </span><span class='decorator'>Date</span><span class='decorator'>, </span><span class='decorator'>buoyString</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">When a user presses the button to deploy their Buoy after setting a retrieval time for it, this function is called.</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/disconnectbuoy(buoy:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>disconnectBuoy</span><span class='decorator'>(</span><span class='decorator'>buoy</span><span class='decorator'>: </span><span class='decorator'>Buoy</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">When a user clicks on the button to disconnect from a Buoy on the spec screen, this function is called. This function removes it from the list of connected buoys, adds it to the list of disconnected buoys, and terminates the Bluetooth connection with the device</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/encode(to:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>encode</span><span class='decorator'>(</span><span class='decorator'>to</span><span class='decorator'>: </span><span class='decorator'>Encoder</span><span class='decorator'>) </span><span class='decorator'>throws</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">Encodes the different arrays that will need to be persistent across app launches for a user.</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/forgetbuoy(buoy:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>forgetBuoy</span><span class='decorator'>(</span><span class='decorator'>buoy</span><span class='decorator'>: </span><span class='decorator'>Buoy</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">When a user clicks on the button to forget a Buoy on the spec screen, this function is called. This function iterates over all previously connected buoys. It removes the buoy from the list of previously connected buoys, its respective list if it was connected or disconnected, and, if it is currently connected to, terminates the Bluetooth connection.</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Type Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/shared.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>static</span><span class='decorator empty-token'> </span><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>shared</span><span class='decorator'>: </span><span class='decorator'>User</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Enumerations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/user/codingkeys/index.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>enum</span><span class='decorator empty-token'> </span><span class='identifier'>CodingKeys</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Default Implementations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/puget_buoy_beta/user/observableobject-implementations.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  ObservableObject Implementations
+                </a>
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+  
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

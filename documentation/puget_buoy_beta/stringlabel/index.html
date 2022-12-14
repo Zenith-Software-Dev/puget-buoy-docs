@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>StringLabel| Documentation</title>
+    
+    <link rel="icon"       href="../../../favicon.ico" />
+    <link rel="mask-icon"  href="../../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                
+                  <a href="../index.html" class="item">Puget Buoy Beta</a>
+                
+              </li>
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">StringLabel</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Structure</span>
+  <h1 class="title">StringLabel</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      This is the view for the string label. It reacts to a user’s touch to change color and show the list of buoys
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <section id='declaration' class='declaration'>
+  <h2>Declaration</h2>
+  <div class='declaration-group'>
+    <pre class='source indented'><code><span class='token-keyword'>struct</span> <span class='token-identifier'>StringLabel</span></code></pre>
+  </div>
+</section>
+<section id="parameters" class="parameters">
+  <h2>Parameters</h2>
+  <dl>
+    
+      <dt class="param-name"><code>map</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A reference to the mapbox map</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>isSelected</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>Bool</code> value if it is selected</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>isHighlighted</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>Similar to <code>isSelected</code>, but this is used by the UI to change colors</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>buoyString</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A reference to the buoy string the label represents</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>user</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>An observed instance of the user state</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>dateFormatter</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>DateFormatter</code> used to show the string’s date</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>searchText</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The current search text</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>proxy</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>ScrollViewProxy</code> used to scroll the view and ensure the string label is visible</p></div>
+      </dd>
+    
+  </dl>
+</section>
+
+  </div>
+</div>
+
+  
+  <section id='topics' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>Topics</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Initializers</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/init(map:isselected:ishighlighted:buoystring:searchtext:proxy:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='identifier'>init</span><span class='decorator'>(</span><span class='decorator'>map</span><span class='decorator'>: </span><span class='decorator'>MapBoxMapView</span><span class='decorator'>, </span><span class='decorator'>isSelected</span><span class='decorator'>: </span><span class='decorator'>Bool</span><span class='decorator'>, </span><span class='decorator'>isHighlighted</span><span class='decorator'>: </span><span class='decorator'>Bool</span><span class='decorator'>, </span><span class='decorator'>buoyString</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span><span class='decorator'>, </span><span class='decorator'>searchText</span><span class='decorator'>: </span><span class='decorator'>Binding</span><span class='decorator'>&lt;</span><span class='decorator'>String</span><span class='decorator'>&gt;, </span><span class='decorator'>proxy</span><span class='decorator'>: </span><span class='decorator'>ScrollViewProxy</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/body.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>body</span><span class='decorator'>: </span><span class='decorator'>some</span><span class='decorator empty-token'> </span><span class='decorator'>View</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/buoystring.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>buoyString</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/dateformatter.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>let</span><span class='decorator empty-token'> </span><span class='identifier'>dateFormatter</span><span class='decorator'>: </span><span class='decorator'>DateFormatter</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/ishighlighted.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>isHighlighted</span><span class='decorator'>: </span><span class='decorator'>Bool</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/isselected.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>isSelected</span><span class='decorator'>: </span><span class='decorator'>Bool</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/map.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>map</span><span class='decorator'>: </span><span class='decorator'>MapBoxMapView</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/proxy.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>proxy</span><span class='decorator'>: </span><span class='decorator'>ScrollViewProxy</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/searchtext.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>searchText</span><span class='decorator'>: </span><span class='decorator'>String</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Default Implementations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/puget_buoy_beta/stringlabel/view-implementations.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  View Implementations
+                </a>
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+  
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

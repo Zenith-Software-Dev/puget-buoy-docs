@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>AutoQueView| Documentation</title>
+    
+    <link rel="icon"       href="../../../favicon.ico" />
+    <link rel="mask-icon"  href="../../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                
+                  <a href="../index.html" class="item">Puget Buoy Beta</a>
+                
+              </li>
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">AutoQueView</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Structure</span>
+  <h1 class="title">AutoQueView</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      This is the SwiftUI view for the auto-que view
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <section id='declaration' class='declaration'>
+  <h2>Declaration</h2>
+  <div class='declaration-group'>
+    <pre class='source indented'><code><span class='token-keyword'>struct</span> <span class='token-identifier'>AutoQueView</span></code></pre>
+  </div>
+</section>
+<section id="parameters" class="parameters">
+  <h2>Parameters</h2>
+  <dl>
+    
+      <dt class="param-name"><code>spoolerManager</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The spooler bluetooth manager</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>user</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>An observed reference of the user state</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>elementHeight</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The height of the elements</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>AutoQueWidth</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>the width of the elements on the screen</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>spooler</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>An observed reference of the connected spooler</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>showingConnectionSheet</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>Bool</code> representing if the connection page is shown</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>selectedString</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The currently selected buoy string</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>date</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The current date value of the selected string</p></div>
+      </dd>
+    
+  </dl>
+</section>
+
+  </div>
+</div>
+
+  
+  <section id='topics' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>Topics</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Initializers</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/init().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='identifier'>init</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/init(spoolermanager:user:elementheight:autoquewidth:spooler:showingconnectionsheet:selectedstring:date:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='identifier'>init</span><span class='decorator'>(</span><span class='decorator'>spoolerManager</span><span class='decorator'>: </span><span class='decorator'>BluetoothManager</span><span class='decorator'>, </span><span class='decorator'>user</span><span class='decorator'>: </span><span class='decorator'>User</span><span class='decorator'>, </span><span class='decorator'>elementHeight</span><span class='decorator'>: </span><span class='decorator'>CGFloat</span><span class='decorator'>, </span><span class='decorator'>AutoQueWidth</span><span class='decorator'>: </span><span class='decorator'>CGFloat</span><span class='decorator'>, </span><span class='decorator'>spooler</span><span class='decorator'>: </span><span class='decorator'>Spooler</span><span class='decorator'>, </span><span class='decorator'>showingConnectionSheet</span><span class='decorator'>: </span><span class='decorator'>Bool</span><span class='decorator'>, </span><span class='decorator'>selectedString</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span><span class='decorator'>?, </span><span class='decorator'>date</span><span class='decorator'>: </span><span class='decorator'>Date</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Properties</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/autoquewidth.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>AutoQueWidth</span><span class='decorator'>: </span><span class='decorator'>CGFloat</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/body.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>body</span><span class='decorator'>: </span><span class='decorator'>some</span><span class='decorator empty-token'> </span><span class='decorator'>View</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/date.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>date</span><span class='decorator'>: </span><span class='decorator'>Date</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/elementheight.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>elementHeight</span><span class='decorator'>: </span><span class='decorator'>CGFloat</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/selectedstring.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>selectedString</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span><span class='decorator'>?</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/showingconnectionsheet.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>showingConnectionSheet</span><span class='decorator'>: </span><span class='decorator'>Bool</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/spooler.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>spooler</span><span class='decorator'>: </span><span class='decorator'>Spooler</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/spoolermanager.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>spoolerManager</span><span class='decorator'>: </span><span class='decorator'>BluetoothManager</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/user.html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>var</span><span class='decorator empty-token'> </span><span class='identifier'>user</span><span class='decorator'>: </span><span class='decorator'>User</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Default Implementations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/puget_buoy_beta/autoqueview/view-implementations.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  View Implementations
+                </a>
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+  
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>

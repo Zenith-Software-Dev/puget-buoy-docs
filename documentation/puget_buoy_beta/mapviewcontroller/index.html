@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    
+    <title>MapViewController| Documentation</title>
+    
+    <link rel="icon"       href="../../../favicon.ico" />
+    <link rel="mask-icon"  href="../../../favicon.svg" color="#333333" />
+    <link rel='stylesheet' href='../../../css/site.css' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="doc-topic">
+        <nav role="navigation" class="nav documentation-nav">
+  <div class="nav__wrapper">
+    <div class="nav__background"></div>
+    <div class="nav-content">
+      <div class="nav-title">
+        <span class="nav-title-link inactive">Documentation</span>
+      </div>
+      <div class="nav-menu">
+        <div class="nav-menu-tray">
+          <ul class="nav-menu-items hierarchy">
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                
+                  <a href="../index.html" class="item">Puget Buoy Beta</a>
+                
+              </li>
+            
+              <li class="nav-menu-item hierarchy-item">
+                
+                  <span class="current item">MapViewController</span>
+                
+                
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" role="main" class="main">
+  <div class="topictitle">
+  <span class="eyebrow">Class</span>
+  <h1 class="title">MapViewController</h1>
+</div>
+
+  <div class="container content-grid">
+  <div class="description">
+    <div class="abstract content">
+      A <code>UIViewController</code> for the Mapbox Map View
+    </div>
+  </div>
+  
+  <!-- The sidebar once we have one: <div class="summary"></div> -->
+  
+  <div class="primary-content">
+    <section id='declaration' class='declaration'>
+  <h2>Declaration</h2>
+  <div class='declaration-group'>
+    <pre class='source indented'><code><span class='token-keyword'>class</span> <span class='token-identifier'>MapViewController</span></code></pre>
+  </div>
+</section>
+<section id="parameters" class="parameters">
+  <h2>Parameters</h2>
+  <dl>
+    
+      <dt class="param-name"><code>mapViewContainer</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The <code>UIView</code> for the Mpabox map</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>logView</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The logger view for mapbox maps (not seen by the user)</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>button</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A button used by mapbox</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>stylePackProgressView</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>UIProgressView</code> that shows the current status of the style pack download</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>tileRegionProgressView</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>UIProgressView</code> that shows the current status of the tile region download</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>progressContainer</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A container for the progress views</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>pointAnnotationManager</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A manager for all of the point annotations of the buoys</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>mapView</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The current MapView</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>tileStore</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A <code>TileStore</code> used by mapbox to store the offline map download</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>downloads</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A list of the current downloads</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>defaultCoord</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>A default coordinate used for initalization and testing</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>defaultZoom</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The zoom level the map starts at</p></div>
+      </dd>
+    
+      <dt class="param-name"><code>tileRegionId</code></dt>
+      <dd class="param-content">
+        <div class="content"><p>The identifier to get the tile region from storage</p></div>
+      </dd>
+    
+  </dl>
+</section>
+
+  </div>
+</div>
+
+  
+  <section id='topics' class='contenttable alt-light'>
+  <div class='container'>
+    <h2 class='title'>Topics</h2>
+
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Instance Methods</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/addannotation(buoy:string:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>addAnnotation</span><span class='decorator'>(</span><span class='decorator'>buoy</span><span class='decorator'>: </span><span class='decorator'>Buoy</span><span class='decorator'>, </span><span class='decorator'>string</span><span class='decorator'>: </span><span class='decorator'>BuoyString</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to add annotations to the mapbox map</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/calculatecirclepoints(radiusinmiles:center:numberofpoints:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>calculateCirclePoints</span><span class='decorator'>(</span><span class='decorator'>radiusInMiles</span><span class='decorator'>: </span><span class='decorator'>Double</span><span class='decorator'>, </span><span class='decorator'>center</span><span class='decorator'>: </span><span class='decorator'>CLLocationCoordinate2D</span><span class='decorator'>, </span><span class='decorator'>numberOfPoints</span><span class='decorator'>: </span><span class='decorator'>Int</span><span class='decorator'>) -&gt; [[</span><span class='decorator'>Double</span><span class='decorator'>]]</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to calculate the location of the red circle around the user.</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/handleannotationtap(annotations:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>handleAnnotationTap</span><span class='decorator'>(</span><span class='decorator'>annotations</span><span class='decorator'>: [</span><span class='decorator'>Annotation</span><span class='decorator'>])</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to decide what to do when an annotation is tapped</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/movemap(to:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>moveMap</span><span class='decorator'>(</span><span class='decorator'>to</span><span class='decorator'>: </span><span class='decorator'>CLLocationCoordinate2D</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to move the mapbox map</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/removeannotation(annotation:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>removeAnnotation</span><span class='decorator'>(</span><span class='decorator'>annotation</span><span class='decorator'>: </span><span class='decorator'>Annotation</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to remove an annotation from the map</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/tappedannotation(annotation:).html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>tappedAnnotation</span><span class='decorator'>(</span><span class='decorator'>annotation</span><span class='decorator'>: </span><span class='decorator'>Annotation</span><span class='decorator'>)</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to handle tapping annotations</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/viewdidload().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>viewDidLoad</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function called when the view finishes loading. This is used to initialize any remaining data that depends on the view</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/zoomin().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>zoomIn</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to handle zooming in the mapbox map</div>
+              </div>
+            </div>
+          
+            <div class="link-block topic">
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/zoomout().html" class="link has-adjacent-elements">
+                  <code class="decorated-title"><span class='decorator'>func</span><span class='decorator empty-token'> </span><span class='identifier'>zoomOut</span><span class='decorator'>()</span></code>
+                </a>
+              
+              
+              <div class="abstract">
+                <div class="content">A function to handle zooming out the mapbox map</div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="row contenttable-section">
+        <div class="col section-title large-3 medium-3 small-12">
+          <h3 class="title">Default Implementations</h3>
+        </div>
+  
+        <div class="col section-content large-9 medium-9 small-12">
+          
+            <div class="link-block topic">
+              
+              
+                <a href="../../../documentation/puget_buoy_beta/mapviewcontroller/annotationinteractiondelegate-implementations.html" class="link has-adjacent-elements">
+                  <span class="topic-icon-wrapper">&nbsp;</span>
+                  AnnotationInteractionDelegate Implementations
+                </a>
+              
+              <div class="abstract">
+                <div class="content"></div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+  
+</main>
+
+      </div>
+    </div>
+    <footer class="footer"></footer>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>
